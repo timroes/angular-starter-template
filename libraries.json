@@ -4,5 +4,6 @@
 	"angular/angular.min.js",
 	"angular-aria/angular-aria.min.js",
 	"angular-route/angular-route.min.js",
-	"angular-touch/angular-touch.min.js"
+	"angular-touch/angular-touch.min.js",
+	"bootstrap/dist/**/*"
 ]
