@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-	connect = require('gulp-connect');
+	connect = require('gulp-connect'),
+	libs = require('./libraries.json');
 
 gulp.task('refresh', function() {
 	gulp.src('src/**')
@@ -17,3 +18,8 @@ gulp.task('serve', function() {
 });
 
 gulp.task('default', ['serve']);
+
+gulp.task('libs', function () {
+	gulp.src(libs.map(function (lib) { return 'node_modules/' + lib; }))
+		.pipe(gulp.dest('src/libs'));
+});
